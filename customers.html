@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #0652dd;
+  --secondary-color: #ea2027;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+body {
+  font-family: "Roboto", sans-serf;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+.fist {
+  color: var(--secondary-color);
+}
+
+.SHAPE {
+  color: var(--primary-color);
+}
+
+.INT {
+  color: var(--secondary-color);
+}
+.close {
+  color: var(--primary-color);
+}
+
+.closer {
+  color: var(--secondary-color);
+}
+    
+.menu a {
+        text-decoration: none;
+        color: chartreuse;
+        padding: 10px 10px;
+        font-size: 18px;
+        border-bottom: 1px rgb(197, 51, 51);
+        border-radius: 10px;
+        position:relative;
+
+      }
+      
+      
+      .menu a:hover{
+        background:black;
+        border-bottom: 3px solid indianred;
+        transition: 0.4s;
+
+      }
+      .register a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: orange;
+        border-radius: 10px;
+      }
+      .register a:hover{
+        background: transparent;
+        border: 1px solid orange;
+        transition: 0.4s;
+
+      }
+    nav {
+        height: 100px;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        box-shadow: 2px 3px 2px #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .logo {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      .nav-item {
+        margin-left: 2rem;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .nav-link {
+        font-weight: var(--bold-font);
+      }
+      .para{
+        margin-top: 100px;
+      }
+
+      
+button{
+    
+    margin-left: 600px;
+    
+    margin-top: 100px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.para{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        margin-top: 5%;
+        font-style: oblique;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        box-shadow: 2px 3px 2px black;
+        border: 8px solid
+        black;
+        
+        color: 
+        black;
+        font-size: xx-large;
+        display: flex;
+        flex: 10;
+        min-height: opx;
+    }
+</style>
+<body>
+    <nav>
+        <a href="#" class="logo">
+          <h1>
+            <span class="SHAPE">SHAPE</span><span class="INT"> INT</span
+            ><span class="fist">&#x1F44A;</span>
+          </h1>
+        </a>
+  
+        <div class="menu">
+         
+          <a href="./first.html">HOME</a>
+        <a href="#">PRODUCTS</a>
+        <a href="./customers.html">CUSTOMERS</a>
+        <a href="#">RESOURCES</a>
+        <a href="#">CONTACT US</a>
+        <a href="#">CAREER</a>
+        </div>
+        <div class="register">
+          <a href="#">SIGN IN</a>
+          <a href="#">DEMO</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+      <button href="./first.html" class="glow-on-hover" type="button"  style="font: size 100px; ">OBJECTIVE </button>
+      <div class="para">
+   
+        
+       
+The document lays down the foundation for product thinking for the “ShapeINT” P&L and lists down initial priorities and roadmap based on that. 
+
+The framework, approach and strategy laid down in the document is intended to drive clarity of thought for any product requirements and prioritisation in the medium term (till market validation is not achieved and the 0 to 1 journey is still in progress)
+
+This document should also act as both, a guidance and a guardrail, to take product decisions in case of trade-offs and/or conflicting priorities.
+
+Problem Space
+“Interviewing in the contemporary business setting invariably takes place in an atmosphere filled with a sense of urgency. The time allocated to the interview is necessarily limited. Consequently, a non-directive approach finds little application; it is necessary to use the guided interview in the vast majority of situations. This inherent time constraint sometimes brings about dysfunctional consequences: the interviewer is so preoccupied with budgeting his time that the content and the purpose of the interview are vitiated” - Harvard Business Review (Click here to read complete article)
+
+Due to very hectic schedule & inability to allocate time for interview preparation, Interviewers are unprepared for the interview.
+      </div>
+  <body>
+
+   
+    
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html >
+  <head>
+
+    
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Web page CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Simple lightbox CSS -->
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+
+    <title>JabTV Landing Page</title>
+    
+    
+    
+    <style type="text/css">
+      
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+      /* CSS Variables */
+      :root {
+        --normal-font: 400;
+        --bold-font: 600;
+        --bolder-font: 900;
+        --primary-color: #0652dd;
+        --secondary-color: #ea2027;
+        --line-height: 1.7rem;
+        --transition: 0.4s ease-in;
+      }
+
+      /* Smooth scroll effect */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Resets */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: var(--transition);
+      }
+
+      body {
+        font-family: "Roboto", sans-serf;
+        overflow-x: hidden;
+        
+      }
+
+      ul li {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+
+      a:hover {
+        color: var(--secondary-color);
+      }
+      .fist {
+        color: var(--secondary-color);
+      }
+
+      .SHAPE {
+        color: var(--primary-color);
+      }
+
+      .INT {
+        color: var(--secondary-color);
+      }
+      .close {
+        color: var(--primary-color);
+      }
+
+      .closer {
+        color: var(--secondary-color);
+      }
+      .menu a {
+        text-decoration: none;
+        color: chartreuse;
+        padding: 10px 10px;
+        font-size: 18px;
+        border-bottom: 1px rgb(197, 51, 51);
+        border-radius: 10px;
+        position:relative;
+
+      }
+      
+      
+      .menu a:hover{
+        background:black;
+        border-bottom: 3px solid indianred;
+        transition: 0.4s;
+
+      }
+      .register a {
+        margin-right: 40px;
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: orange;
+        border-radius: 10px;
+      }
+      .register a:hover{
+        background: transparent;
+        border: 1px solid orange;
+        transition: 0.4s;
+
+      }
+      nav {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        box-shadow: 2px 3px 2px #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+        position: sticky;
+        top: 0;
+        overflow-x: hidden;
+        left: 0;
+        z-index: 1;
+      }
+      .hamburger {
+        display: none;
+      }
+      .hamburger {
+        display: none;
+      }
+      .logo {
+        margin-left: 20px;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-item {
+        margin-left: 2rem;
+        border-bottom: 1px solid #f1f1f1;
+      }
+
+      .nav-link {
+        font-weight: var(--bold-font);
+      }
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.9rem;
+        max-width: 1100px;
+        margin: 2rem auto -6rem;
+      }
+      .intro-text h1 {
+        font-size: 3rem;
+        background: cyan;
+        margin-bottom: 1rem;
+      }
+
+      .intro-text h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .hero p {
+        line-height: var(--line-height);
+        background: cyan;
+        border: 4px orange;
+      }
+
+      .hear {
+        color: var(--primary-color);
+      }
+
+      .connecting {
+        color: var(--secondary-color);
+      }
+      .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 0.8rem 0.6rem;
+        border: none;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        color: #fff;
+      }
+
+      .red {
+        background-color: var(--secondary-color);
+        margin-right: 1.5rem;
+      }
+
+      .red:hover {
+        background-color: #f1262d;
+        color: #fff;
+      }
+
+      .blue {
+        background-color: var(--primary-color);
+      }
+
+      .blue:hover {
+        background-color: #095cf7;
+        color: #fff;
+      }
+      iframe {
+        max-width: 30rem;
+        border-top: 40px groove var(--primary-color);
+        border-bottom: 40px groove var(--primary-color);
+        border-right: 28px solid var(--secondary-color);
+        border-left: 28px solid var(--secondary-color);
+      }
+
+      .stand-1 {
+        height: 90px;
+        width: 6px;
+        background-color: var(--primary-color);
+        transform: rotate(40deg);
+        position: relative;
+        top: -16px;
+        left: 200px;
+      }
+      .stand-2 {
+        height: 90px;
+        width: 6px;
+        background-color: var(--secondary-color);
+        transform: rotate(-40deg);
+        position: relative;
+        top: -105px;
+        left: 255px;
+      }
+
+      .about {
+        position: relative;
+        background: url("../images/jab-transformed.png") no-repeat top
+          center/cover;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .stars-gallery img,
+      .stars-gallery a {
+        width: 100%;
+        height: 100%;
+      }
+      .checkbox {
+        opacity: 0;
+        position: absolute;
+      }
+      .label {
+        width: 50px;
+        height: 29px;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
+        padding: 6px;
+        position: relative;
+      }
+      .switcher {
+        background-color: #fff;
+        position: absolute;
+        top: 5px;
+        left: 2px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+      }
+      .moon {
+        color: #ffa502;
+      }
+
+      .sun {
+        color: #ff4757;
+      }
+      .checkbox:checked + .label .switcher {
+        transform: translateX(24px);
+      }
+      body.dark {
+        background-color: #1e272e;
+      }
+
+      body.dark .bar {
+        background-color: #fff;
+      }
+
+      body.dark p {
+        color: #fff;
+      }
+
+      body.dark h3 {
+        color: #fff;
+      }
+
+      body.dark nav {
+        background-color: #1e272e;
+        box-shadow: 2px 3px 2px #111010;
+      }
+
+      body.dark ul {
+        background-color: #1e272e;
+      }
+
+      body.dark .name {
+        color: var(--primary-color);
+      }
+
+      body.dark .role {
+        color: var(--secondary-color);
+      }
+
+      body.dark footer {
+        color: #fff;
+        border-top: 1px solid #111010;
+        box-shadow: 0px -2px 3px #111010;
+      }
+      .sub {
+        margin-top: 2rem;
+      }
+
+      .sub h3 {
+        text-align: center;
+      }
+
+      form {
+        text-align: center;
+        margin: 0.4rem 2rem;
+      }
+      .email-sub {
+        padding: 0.2rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+      }
+
+      .email-sub:focus {
+        border: 1px solid var(--secondary-color);
+        outline: none;
+      }
+      .submit-btn {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 0.3rem;
+        margin: 0 0.5rem;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        background-color: #095cf7;
+      }
+      .social {
+        text-align: center;
+        margin: 2rem;
+      }
+
+      .socicons {
+        font-size: 1.3rem;
+      }
+      .big {
+        width: 100px;
+        height: 100px;
+      }
+      .social {
+        float: inline-end;
+  background-color:
+  coral;
+  float: right;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 430px;
+}
+.sub {
+  background-color: coral;
+  border-radius: 28px;
+  float: right;
+  font: 15px;
+  width: 25%;
+
+  
+  padding: 10px 15px;
+  margin-top: 800px;
+  align-items: center;
+}
+footer {
+  font-size: 75px;
+   margin-top: 100px;
+   height: 20px;
+   float: inline-end;
+   width: 60%
+   
+   
+   
+   
+
+   
+   
+
+}
+    
+html {
+	height: 100%;
+	/* max-height: 600px; */
+	width: 1500px;
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+	}
+  .stars-gallery p{
+    color:
+  black;
+    font-style: oblique;
+    width: 400px;
+    height: 400px;
+    margin-top: 500px;
+    font-size: 50px;
+    overflow: auto;
+    margin-bottom: 0px;
+    border: gold;
+    background: linear-gradient(to bottom left, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89));
+    float: right;
+    box-shadow: 2px 3px 2px #f1f1f1;
+        border: 15px solid #f1f1f1;
+  }
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+	}
+
+    </style>
+  </head>
+
+  <body>
+    
+    <!-- Navbar -->
+
+    <!-- Dark/light theme switcher -->
+
+    <!-- Bars -->
+
+    <!-- Hero section -->
+
+    <!-- About section -->
+
+    <!-- Lightbox image gallery -->
+
+    <!-- Jab TV Stakeholders -->
+
+    <!-- Email subscription -->
+
+    <!-- Social icons -->
+
+    <!-- Scroll to top button -->
+
+    <!-- Web page script -->
+
+    
+    
+
+    <nav>
+      <a href="#" class="logo">
+        <div class="theme-switch">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+            <ion-icon name="moon-outline" class="moon"></ion-icon>
+            <div class="switcher"></div>
+          </label>
+        </div>
+        <h1>
+          <span class="SHAPE">SHAPE</span><span class="INT"> INT</span
+          ><span class="fist">&#x1F44A;</span>
+        </h1>
+      </a>
+
+      <div class="menu">
+        <a href="./first.html">HOME</a>
+        <a href="#">PRODUCTS</a>
+       
+        
+          <a href="./customers.html">CUSTOMERS</a>
+        
+        <a href="#">RESOURCES</a>
+        <a href="#">CONTACT US</a>
+        <a href="#">CAREER</a>
+      </div>
+      <div class="register">
+        <a href="#">SIGN IN</a>
+        <a href="#">DEMO</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons CDN -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Simple lightbox -->
+    <script src="assets/js/simple-lightbox.min.js"></script>
+    <script>
+      // Simple lightbox initializer
+    </script>
+    <section class="hero">
+      <div class="intro-text">
+        <h1>
+          <span class="hear"> Shape your hiring </span> <br />
+          <span class="connecting"> with </span>
+          <span class="close"> SHAPE </span>
+          <span class="closer"> INT </span>
+        </h1>
+        <p style="font-size: 20px">
+          SHAPE INT makes hiring easy. Lower your cost-per-candidate by asking
+          the right screening questions and reviewing resumes before you pay.
+          Only pay when you are ready to move forward with a candidate.
+        </p>
+        <a class="btn red" href="#">Learn More</a>
+        <a class="btn blue" href="#">Subscribe</a>
+      </div>
+      <div class="i-frame">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/sUmM_PFpsvQ"
+          title="YouTube video player"
+          frameborder="10"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+        <div class="stand-1"></div>
+        <div class="stand-2"></div>
+      </div>
+    </section>
+    <section class="stars" id="stars">
+      <div class="stars-gallery">
+        <a
+          href="
+        #"
+          class="big"
+        >
+          <img src="./joy2int.webp" 
+          style="width:60%; margin-top: 500px; margin-bottom: 500px;box-shadow: 2px 3px 2px #f1f1f1;
+          border: 15px solid #f1f1f1;"
+           />
+          
+        </a>
+        <p>
+            Hey! Hey! 
+            welcome to “ShapeINT” . 
+            Let's start your recruiting process.
+          
+        </p>
+        <a
+          href="
+        #"
+          class="big"
+        >
+          <img src="./image1int.webp"
+          style="width:60%; margin-top: 500px; margin-bottom: 500px;box-shadow: 2px 3px 2px #f1f1f1;
+          border: 15px solid #f1f1f1;" />
+          
+        </a>
+
+        <a
+          href="
+        #"
+          class="big"
+        >
+          <img
+            src="./digital3int.webp"
+            style="width:60%; margin-top: 500px; margin-bottom: 500px;box-shadow: 2px 3px 2px #f1f1f1;
+          border: 15px solid #f1f1f1;"
+           
+            
+          />
+        </a>
+
+        <a
+          href="
+        #"
+          class="big"
+          ><img
+            src="./approved5int.webp"
+            
+            style="width:60%; margin-top: 500px; margin-bottom: 500px;box-shadow: 2px 3px 2px #f1f1f1;
+          border: 15px solid #f1f1f1;"
+          />
+        </a>
+        
+
+        <a href="#" class="big">
+          <img
+            src="./recruitment4int.webp"
+           
+            
+          />
+        </a>
+        
+        
+       <section class="sub" id="sub">
+        <div style="font: size 1px; ;">
+          <h3>Subscribe to our newsletter for updates</h3>
+         <form action="#">
+           <input
+             type="email"
+             name="email"
+             id="email-sub"
+             class="email-sub"
+             required
+           />
+           <input
+             type="submit"
+             value="Subscribe"
+             id="submit-btn"
+             class="submit-btn"
+           /></div>
+         </form>
+       </section>
+         <section class="social">
+           
+          <div >
+            <h3>Connect with us on Social Media</h3>
+           <div class="socicons">
+             <a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a>
+             <a href="#"> <ion-icon name="logo-instagram"></ion-icon> </a>
+             <a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a>
+           </div>
+         </div>
+     
+         
+
+    <script>
+      const checkbox = document.querySelector("#checkbox");
+
+      checkbox.addEventListener("change", () => {
+        // Toggle website theme
+        document.body.classList.toggle("dark");
+      });
+      var lightbox = new SimpleLightbox(".stars-gallery a");
+    </script>
+    
+    <section class="footer" style="
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  
+  text-align: center;
+    "> 
+      
+  
+     " SHAPE INT is here to revolutionise the way of recruitment process. Come join us and make your reqruitment easy."
+
+
+ 
+    </section>
+      
+      
+  </body>
+</html>
